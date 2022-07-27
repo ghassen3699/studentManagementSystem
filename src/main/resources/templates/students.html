@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Management Student</title>
+</head>
+<body>
+  <div>
+    <div>
+      List Students
+    </div>
+    <div>
+      <a th:href = "@{/students/new}">Add Student</a>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th> Student First Name</th>
+          <th> Student Last Name</th>
+          <th> Student E-mail</th>
+          <th> Action </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each = "s:${Student}">
+          <td th:text = "${s.firstName}"></td>
+          <td th:text = "${s.lastName}"></td>
+          <td th:text = "${s.email}"></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
